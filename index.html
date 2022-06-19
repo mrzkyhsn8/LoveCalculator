@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        button {
+            background-color: cadetblue;
+            opacity: 0.8;
+            width: 200px;
+            height: 50px;
+            color: white;
+        }
+
+        button:hover {
+            background-color: cadetblue;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <script src="script.js"></script>
+
+    <div>
+        <h2>Nama Pertama</h2>
+        <input type="text" id="namaPertama">
+    </div>
+    <div>
+        <h2>Nama Kedua</h2>
+        <input type="text" id="namaKedua">
+    </div>
+    <button onclick="fetchData()">
+        Hitung Kecocokan
+    </button>
+    
+    <h2 id="tampilNama1">Hasil</h2>
+    <h2 id="tampilNama2">Hasil</h2>
+
+    <h3>Kecocokan: <span id="hasilPersen"></span></h3>
+</body>
+</html>
