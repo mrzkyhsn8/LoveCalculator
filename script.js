@@ -1,3 +1,10 @@
+function getResult() {
+    const namaPertama = document.getElementById("couple-nama-pertama").value;
+    const namaKedua = document.getElementById("couple-nama-kedua").value;
+    fetchData(namaPertama, namaKedua);
+}
+
+
 const options = {
 	method: 'GET',
 	headers: {
@@ -6,33 +13,19 @@ const options = {
 	}
 };
 
-
 async function fetchData() {
-	let result = await fetch('https://love-calculator.p.rapidapi.com/getPercentage', options)
+	let result = await fetch(`https://love-calculator.p.rapidapi.com/getPercentage?sname=Alice&fname=John`, options)
 		.then(response => response.json())
-		.then(response => {
-			
-			const json = await response.json();
-			console.log("console log " + json);
+		.then(result => {
+            console.log(result.fname)
+            // console.log(`nama pertama: ${namaPertama}`);
+            // console.log(`nama kedua: ${namaKedua}`);
 
-			// simpan nama pertama ke variabel
-			const namaPertama = document.getElementById("namaPertama").value;
-			tampilNama1 = document.getElementById("tampilNama1");
-
-			// simpan nama kedua ke variabel
-			const namaKedua = document.getElementById("namaKedua").value;
-			tampilNama2 = document.getElementById("tampilNama2");
-
-			console.log(namaPertama);
-			console.log(namaKedua);
-			
-			// tampilkan nama
-			tampilNama1.innerHTML = `${namaPertama}`;
-			tampilNama2.innerHTML = `${namaKedua}`;
-
-			
-		})
-		.catch(err => console.error(err));
-	
-	
-}
+            const namaPertama = document.getElementById("couple-nama-pertama").value;
+            const namaKedua = document.getElementById("couple-nama-kedua").value;
+            console.log(namaPertama);
+            console.log(namaKedua);
+            
+        })
+		.catch(err => console.error(err))
+};
