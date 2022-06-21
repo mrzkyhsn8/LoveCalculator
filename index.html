@@ -8,45 +8,80 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
     
+    <!-- header -->
     <header>
-    <div class="card mb-3 m-auto" style="max-width: 900px">
+      <div class="header-wrapper">
+        <div class="header-left">
+          <h3>Love Calculator</h3>
+        </div>
+        <div class="header-right">
+          <!-- <a href="#" id="modal-info" id="myBtn">Info</a> -->
+          <button class="btn-info" id="myBtn">Info</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- content tengah -->
+    <div class="content">
+    <div class="card mb-3 m-auto" style="max-width: 750px">
         <div class="row g-0">
+          <!-- image kiri -->
           <div class="col-md-4">
-            <img src="img/img-card.png" class="img-fluid rounded-start" alt="...">
+            <img src="img/img-card.png" class="img-fluid rounded-start">
           </div>
           <div class="col-md-8">
             <div class="card-header">
-                <h3 class="card-title">Love Calculator API</h3>
+                <h5 class="card-title">Love Calculator API</h5>
             </div>
+            <!-- form input -->
             <div class="card-body"> 
-              <p class="card-text">Enter your name and the name of your partner/lover/crush to find Love compatibility & chances of successful love relationship.</p>
                 <div class="row">
                 <div class="form-group col-md-6">
                   <input type="text" id="couple-nama-pertama" class="form-control" placeholder="Your name" required>
                 </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-6" style="border-left: 3px solid red;">
                   <input type="text" id="couple-nama-kedua" class="form-control" placeholder="Your Crush Name" required>
                 </div>  
-                <div class="d-grid gap-2 col-md-4 m-auto">
-                    <button class="btn btn-success" id="btn-submit" onclick="fetchData()">Calculate</button>
                 </div>
+              <div class="d-grid gap-2 col-md-4 m-auto">
+                <button class="btn" id="btn-submit" onclick="fetchData()">Calculate %</button>
               </div>
             </div>
+            <!-- result area -->
             <div class="card-footer" id="result-area">
-                <p class="card-text">this is footer</p>
-                <div id="result-header"></div>
-                <div id="results">
-                    <div id="result-persentasi"></div>
-                    <div id="result-pesan"></div>
-                </div>
+              <div class="results">
+                <div class="resultNama" id="result-nama"></div>
+                <div class="resultPersen" id="result-persentasi"></div>
+                <div class="resultPesan" id="result-pesan"></div>
+              </div>
+              </div>
             </div>
           </div>
         </div>
     </div>
+    </div>
 
+    <!-- footer -->
+    <footer>
+      <div class="footer">
+        <p>149252529101-245 - Muh Rizky Husain</p>
+      </div>
+    </footer>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h5>App Info</h5>
+        <p>Enter your name and the name of your partner/lover/crush to find Love compatibility & chances of successful love relationship.</p>
+        <a href="https://rapidapi.com/ajith/api/love-calculator/details">Link API</a>
+      </div>
+    </div>
     
     <script src="script.js"></script>
 </body>
