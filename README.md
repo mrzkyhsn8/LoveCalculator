@@ -1,4 +1,4 @@
 # fga-js-api
-Tugas Akhir
-Javascript with API
-DTS FGA Batch 2 x Progate
+<p>Tugas Akhir</p>
+<p>Javascript with API </p>
+<p>DTS FGA Batch 2 x Progate </p>
